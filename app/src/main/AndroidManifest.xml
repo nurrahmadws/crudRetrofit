@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReadActivity" />
-        <activity android:name=".UpdateActivity"></activity>
+        <activity android:name=".UpdateActivity" />
+        <activity android:name=".AddKecamatanActivity" />
+        <activity android:name=".ReadKecActivity"></activity>
     </application>
 
 </manifest>

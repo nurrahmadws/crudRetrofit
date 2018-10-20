@@ -1,6 +1,7 @@
 package com.example.matatabi.crudretrofit.api;
 
 import com.example.matatabi.crudretrofit.model.KabupatenResponse;
+import com.example.matatabi.crudretrofit.model.KecamatanResponse;
 import com.example.matatabi.crudretrofit.model.Value;
 
 import retrofit2.Call;
@@ -31,4 +32,15 @@ public interface ApiRequest {
     @FormUrlEncoded
     @POST("search.php")
     Call<KabupatenResponse> search(@Field("search") String search);
+
+    @GET("spinnerKabupaten.php")
+    Call<KabupatenResponse> spinKab();
+
+    @FormUrlEncoded
+    @POST("insertKec.php")
+    Call<Value> tambahKecamatan(@Field("nm_kabupaten") String nm_kabupaten,
+                                @Field("nm_kecamatan") String nm_kecamatan);
+
+    @GET("readKec.php")
+    Call<KecamatanResponse> readKec();
 }

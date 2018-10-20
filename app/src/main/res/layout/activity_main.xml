@@ -33,4 +33,18 @@
         android:layout_height="wrap_content"
         android:text="Lihat Data"/>
 
+    <Button
+        android:id="@+id/btn_tambah_kec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tambah Kecamatan"/>
+
+    <Button
+        android:id="@+id/btn_lihat_kec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Lihat Kecamatan"/>
+
 </LinearLayout>
