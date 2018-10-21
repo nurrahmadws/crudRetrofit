@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                         String message = response.body().getMessage();
                         if (value.equals("1")){
                             Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(MainActivity.this, ReadActivity.class)
+                                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+                            finish();
                         }else{
                             Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
                         }

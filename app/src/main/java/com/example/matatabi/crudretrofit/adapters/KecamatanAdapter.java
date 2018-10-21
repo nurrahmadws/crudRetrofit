@@ -55,7 +55,7 @@ public class KecamatanAdapter extends RecyclerView.Adapter<KecamatanAdapter.Keca
 
         @Override
         public void onClick(View v) {
-            String nm_kabupaten = txtViewKabupaten.getText().toString();
+            String kabupaten_id = txtViewKabupaten.getText().toString();
             String nm_kecamatan = txtViewKecamatan.getText().toString();
         }
     }

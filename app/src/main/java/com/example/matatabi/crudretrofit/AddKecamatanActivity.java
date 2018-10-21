@@ -1,6 +1,7 @@
 package com.example.matatabi.crudretrofit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -72,6 +73,7 @@ public class AddKecamatanActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<Kabupaten> kabupatenList = response.body().getKabupatenList();
                     List<String> listSpinner = new ArrayList<>();
+                    List<String> listSpin = new ArrayList<>();
                     for (int i = 0; i < kabupatenList.size(); i++) {
                         listSpinner.add(kabupatenList.get(i).getNm_kabupaten());
                     }
@@ -109,6 +111,9 @@ public class AddKecamatanActivity extends AppCompatActivity {
                 String message = response.body().getMessage();
                 if (value.equals("1")){
                     Toast.makeText(AddKecamatanActivity.this, message, Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(AddKecamatanActivity.this, ReadKecActivity.class)
+                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+                    finish();
                 }else {
                     Toast.makeText(AddKecamatanActivity.this, message, Toast.LENGTH_LONG).show();
                 }

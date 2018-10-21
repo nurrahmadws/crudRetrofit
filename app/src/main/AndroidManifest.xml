@@ -22,7 +22,8 @@
         <activity android:name=".ReadActivity" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".AddKecamatanActivity" />
-        <activity android:name=".ReadKecActivity"></activity>
+        <activity android:name=".ReadKecActivity" />
+        <activity android:name=".UpdateKecActivity"></activity>
     </application>
 
 </manifest>
