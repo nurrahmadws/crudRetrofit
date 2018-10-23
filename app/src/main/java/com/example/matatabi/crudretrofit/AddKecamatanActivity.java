@@ -73,7 +73,6 @@ public class AddKecamatanActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<Kabupaten> kabupatenList = response.body().getKabupatenList();
                     List<String> listSpinner = new ArrayList<>();
-                    List<String> listSpin = new ArrayList<>();
                     for (int i = 0; i < kabupatenList.size(); i++) {
                         listSpinner.add(kabupatenList.get(i).getNm_kabupaten());
                     }

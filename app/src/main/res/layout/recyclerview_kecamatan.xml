@@ -22,15 +22,21 @@
             android:padding="5dp">
 
             <TextView
+                android:id="@+id/txtidd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            <TextView
                 android:id="@+id/txtKabupatenn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
             <TextView
                 android:id="@+id/txtKecamatan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
 
 
         </LinearLayout>

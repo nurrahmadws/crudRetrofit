@@ -43,4 +43,14 @@ public interface ApiRequest {
 
     @GET("readKec.php")
     Call<KecamatanResponse> readKec();
+
+    @GET("lihat_wk.php?id_wk=")
+    Call<KecamatanResponse> readKecDet();
+
+    @FormUrlEncoded
+    @POST("updatekec.php")
+    Call<Value> ubahkec(
+            @Field("id_kecamatan") String id_kecamatan,
+            @Field("nm_kabupaten") String nm_kabupaten,
+            @Field("nm_kecamatan") String nm_kecamatan);
 }
