@@ -1,6 +1,8 @@
 package com.example.matatabi.crudretrofit;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -99,6 +101,50 @@ public class UpdateKecActivity extends AppCompatActivity {
                         Toast.makeText(UpdateKecActivity.this, "Gagal Merespon", Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        });
+
+        btnHapusKec = (Button) findViewById(R.id.btnHapusKec);
+        btnHapusKec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder ad = new AlertDialog.Builder(UpdateKecActivity.this);
+                ad.setTitle("Peringatan!!!");
+                ad.setMessage("Yakin Ingin Menghapus Data Ini?");
+                ad.setCancelable(false);
+                ad.setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String id_kecamatan = edtKecamatanupid.getText().toString();
+                        Call<Value> call = RetrofitClient.getmInstance().getApi().hapusKec(id_kecamatan);
+                        call.enqueue(new Callback<Value>() {
+                            @Override
+                            public void onResponse(Call<Value> call, Response<Value> response) {
+                                String value = response.body().getValue();
+                                String message = response.body().getMessage();
+                                if (value.equals("1")){
+                                    Toast.makeText(UpdateKecActivity.this, message, Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }else{
+                                    Toast.makeText(UpdateKecActivity.this, message, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<Value> call, Throwable t) {
+                                t.printStackTrace();
+                                Toast.makeText(UpdateKecActivity.this, "Gagal Merespon", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }).setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = ad.create();
+                dialog.show();
             }
         });
 

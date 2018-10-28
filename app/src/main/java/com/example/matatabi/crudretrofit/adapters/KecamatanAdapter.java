@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.matatabi.crudretrofit.AddDesaActivity;
 import com.example.matatabi.crudretrofit.R;
 import com.example.matatabi.crudretrofit.UpdateKecActivity;
 import com.example.matatabi.crudretrofit.model.Kecamatan;
@@ -64,6 +65,7 @@ public class KecamatanAdapter extends RecyclerView.Adapter<KecamatanAdapter.Keca
             String nm_kecamatan = txtViewKecamatan.getText().toString();
 
             Intent intent =  new Intent(mctk, UpdateKecActivity.class);
+//            Intent intent = new Intent(mctk, AddDesaActivity.class);
             intent.putExtra("id_kecamatan", id_kecamatan);
             intent.putExtra("nm_kabupaten", nm_kabupaten);
             intent.putExtra("nm_kecamatan", nm_kecamatan);

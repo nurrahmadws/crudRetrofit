@@ -47,4 +47,25 @@
         android:layout_marginTop="10dp"
         android:text="Lihat Kecamatan"/>
 
+    <Button
+        android:id="@+id/btn_tambah_desa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tambah Kelurahan/Desa"/>
+
+    <Button
+        android:id="@+id/btn_lihat_desa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Lihat Kelurahan/Desa"/>
+
+    <Button
+        android:id="@+id/btn_lihat_latlng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Lihat Latlng"/>
+
 </LinearLayout>

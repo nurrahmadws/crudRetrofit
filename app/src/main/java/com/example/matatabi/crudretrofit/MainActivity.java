@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edtTextKabupaten;
-    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan;
+    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan, btn_tambah_desa, btn_lihat_desa, btn_lihat_latlng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +89,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ReadKecActivity.class));
+            }
+        });
+
+        btn_tambah_desa = (Button) findViewById(R.id.btn_tambah_desa);
+        btn_tambah_desa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ReadActivity.class));
+            }
+        });
+
+        btn_lihat_desa = (Button) findViewById(R.id.btn_lihat_desa);
+        btn_lihat_desa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ReadKelActivity.class));
+            }
+        });
+
+        btn_lihat_latlng = (Button) findViewById(R.id.btn_lihat_latlng);
+        btn_lihat_latlng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ReadLatlngActivity.class));
             }
         });
     }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.matatabi.crudretrofit.DetailActivity;
 import com.example.matatabi.crudretrofit.R;
 import com.example.matatabi.crudretrofit.UpdateActivity;
 import com.example.matatabi.crudretrofit.model.Kabupaten;
@@ -60,6 +61,7 @@ public class KabupatenAdapter extends RecyclerView.Adapter<KabupatenAdapter.Kabu
             String id_kabupaten = txtViewId.getText().toString();
             String nm_kabupaten = txtViewKabupaten.getText().toString();
 
+//            Intent intent = new Intent(mctx, DetailActivity.class);
             Intent intent = new Intent(mctx, UpdateActivity.class);
             intent.putExtra("id_kabupaten", id_kabupaten);
             intent.putExtra("nm_kabupaten", nm_kabupaten);

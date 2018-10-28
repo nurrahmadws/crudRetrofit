@@ -2,6 +2,8 @@ package com.example.matatabi.crudretrofit.api;
 
 import com.example.matatabi.crudretrofit.model.KabupatenResponse;
 import com.example.matatabi.crudretrofit.model.KecamatanResponse;
+import com.example.matatabi.crudretrofit.model.KelurahanResponse;
+import com.example.matatabi.crudretrofit.model.LatlngResponse;
 import com.example.matatabi.crudretrofit.model.Value;
 
 import retrofit2.Call;
@@ -10,6 +12,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiRequest {
     @FormUrlEncoded
@@ -44,8 +47,8 @@ public interface ApiRequest {
     @GET("readKec.php")
     Call<KecamatanResponse> readKec();
 
-    @GET("lihat_wk.php?id_wk=")
-    Call<KecamatanResponse> readKecDet();
+    @GET("baru.php")
+    Call<KecamatanResponse> readKecDet(@Query("id_kabupaten") String id_kabupaten);
 
     @FormUrlEncoded
     @POST("updatekec.php")
@@ -53,4 +56,52 @@ public interface ApiRequest {
             @Field("id_kecamatan") String id_kecamatan,
             @Field("nm_kabupaten") String nm_kabupaten,
             @Field("nm_kecamatan") String nm_kecamatan);
+
+    @FormUrlEncoded
+    @POST("deleteKec.php")
+    Call<Value> hapusKec(@Field("id_kecamatan") String id_kecamatan);
+
+    @FormUrlEncoded
+    @POST("insertKel.php")
+    Call<Value> tambahKelurahan(@Field("nm_kabupaten") String nm_kabupaten,
+                                @Field("nm_kecamatan") String nm_kecamatan,
+                                @Field("nm_kelurahan") String nm_kelurahan);
+
+    @GET("readKel.php")
+    Call<KelurahanResponse> readKel();
+
+    @FormUrlEncoded
+    @POST("updateKel.php")
+    Call<Value> ubahkel(@Field("id_kelurahan") String id_kelurahan,
+                        @Field("nm_kabupaten") String nm_kabupaten,
+                        @Field("nm_kecamatan") String nm_kecamatan,
+                        @Field("nm_kelurahan") String nm_kelurahan);
+
+    @FormUrlEncoded
+    @POST("deleteKel.php")
+    Call<Value> hapusKel(@Field("id_kelurahan") String id_kelurahan);
+
+    @FormUrlEncoded
+    @POST("insertlatlng.php")
+    Call<Value> tambahLatlng(@Field("nm_kabupaten") String nm_kabupaten,
+                             @Field("nm_kecamatan") String nm_kecamatan,
+                             @Field("nm_kelurahan") String nm_kelurahan,
+                             @Field("nm_lat") String nm_lat,
+                             @Field("nm_lng") String nm_lng);
+
+    @GET("readLatlng.php")
+    Call<LatlngResponse> readLatlng();
+
+    @FormUrlEncoded
+    @POST("updateLatlng.php")
+    Call<Value> ubahLatlng(@Field("id_latlng") String id_latlng,
+                           @Field("nm_kabupaten") String nm_kabupaten,
+                           @Field("nm_kecamatan") String nm_kecamatan,
+                           @Field("nm_kelurahan") String nm_kelurahan,
+                           @Field("nm_lat") String nm_lat,
+                           @Field("nm_lng") String nm_lng);
+
+    @FormUrlEncoded
+    @POST("deleteLatlng.php")
+    Call<Value> hapusLatlng(@Field("id_latlng") String id_latlng);
 }
