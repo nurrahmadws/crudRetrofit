@@ -1,6 +1,7 @@
 package com.example.matatabi.crudretrofit.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.matatabi.crudretrofit.R;
+import com.example.matatabi.crudretrofit.UpdateLatLngActivity;
 import com.example.matatabi.crudretrofit.model.Latlng;
 
 import java.util.List;
@@ -69,6 +71,15 @@ public class LatlngAdapter extends RecyclerView.Adapter<LatlngAdapter.LatlngView
             String nm_kelurahan = txtKelurahanLatlng.getText().toString();
             String nm_lat = txtLat.getText().toString();
             String nm_lng = txtLng.getText().toString();
+
+            Intent intent = new Intent(mctxt, UpdateLatLngActivity.class);
+            intent.putExtra("id_latlng", id_latlng);
+            intent.putExtra("nm_kabupaten", nm_kabupaten);
+            intent.putExtra("nm_kecamatan", nm_kecamatan);
+            intent.putExtra("nm_kelurahan", nm_kelurahan);
+            intent.putExtra("nm_lat", nm_lat);
+            intent.putExtra("nm_lng", nm_lng);
+            mctxt.startActivity(intent);
 
 
         }

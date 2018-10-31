@@ -61,8 +61,8 @@ public class KabupatenAdapter extends RecyclerView.Adapter<KabupatenAdapter.Kabu
             String id_kabupaten = txtViewId.getText().toString();
             String nm_kabupaten = txtViewKabupaten.getText().toString();
 
-//            Intent intent = new Intent(mctx, DetailActivity.class);
-            Intent intent = new Intent(mctx, UpdateActivity.class);
+            Intent intent = new Intent(mctx, DetailActivity.class);
+//            Intent intent = new Intent(mctx, UpdateActivity.class);
             intent.putExtra("id_kabupaten", id_kabupaten);
             intent.putExtra("nm_kabupaten", nm_kabupaten);
             mctx.startActivity(intent);

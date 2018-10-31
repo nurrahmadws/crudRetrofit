@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edtTextKabupaten;
-    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan, btn_tambah_desa, btn_lihat_desa, btn_lihat_latlng;
+    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan, btn_tambah_desa, btn_lihat_desa, btn_lihat_latlng, btn_tambah_laylng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +105,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ReadKelActivity.class));
+            }
+        });
+
+        btn_tambah_laylng = (Button) findViewById(R.id.btn_tambah_latlng);
+        btn_tambah_laylng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ReadActivity.class));
             }
         });
 

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.matatabi.crudretrofit.AddLatlngActivity;
 import com.example.matatabi.crudretrofit.R;
 import com.example.matatabi.crudretrofit.UpdateKecActivity;
 import com.example.matatabi.crudretrofit.UpdateKelActivity;
@@ -68,7 +69,8 @@ public class KelurahanAdapter extends RecyclerView.Adapter<KelurahanAdapter.Kelu
             String nm_kecamatan = txtKecamatann.getText().toString();
             String nm_kelurahan = txtKelurahan.getText().toString();
 
-            Intent intent = new Intent(mct, UpdateKelActivity.class);
+//            Intent intent = new Intent(mct, UpdateKelActivity.class);
+            Intent intent = new Intent(mct, AddLatlngActivity.class);
             intent.putExtra("id_kelurahan", id_kelurahan);
             intent.putExtra("nm_kabupaten", nm_kabupaten);
             intent.putExtra("nm_kecamatan", nm_kecamatan);

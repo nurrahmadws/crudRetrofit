@@ -3,6 +3,7 @@
     package="com.example.matatabi.crudretrofit">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -12,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value=""/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +34,10 @@
         <activity android:name=".AddDesaActivity" />
         <activity android:name=".ReadKelActivity" />
         <activity android:name=".UpdateKelActivity" />
-        <activity android:name=".ReadLatlngActivity"></activity>
+        <activity android:name=".ReadLatlngActivity" />
+        <activity android:name=".AddLatlngActivity" />
+        <activity android:name=".DetailKelActivity" />
+        <activity android:name=".UpdateLatLngActivity"></activity>
     </application>
 
 </manifest>

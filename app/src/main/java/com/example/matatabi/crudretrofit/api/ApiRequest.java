@@ -92,6 +92,9 @@ public interface ApiRequest {
     @GET("readLatlng.php")
     Call<LatlngResponse> readLatlng();
 
+    @GET("detailKel.php")
+    Call<KelurahanResponse> readKelDet(@Query("id_kecamatan") String id_kecamatan);
+
     @FormUrlEncoded
     @POST("updateLatlng.php")
     Call<Value> ubahLatlng(@Field("id_latlng") String id_latlng,
