@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.matatabi.crudretrofit">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -12,11 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value=""/>
+            android:value="AIzaSyA01Y6Y9J-KzWa8vbisZis7H6edCEtIBN8" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -37,7 +41,10 @@
         <activity android:name=".ReadLatlngActivity" />
         <activity android:name=".AddLatlngActivity" />
         <activity android:name=".DetailKelActivity" />
-        <activity android:name=".UpdateLatLngActivity"></activity>
+        <activity android:name=".UpdateLatLngActivity" />
+        <activity
+            android:name=".DetailLatlngActivity"
+            android:label="@string/title_activity_detail_latlng" />
     </application>
 
 </manifest>

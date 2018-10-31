@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.matatabi.crudretrofit.DetailLatlngActivity;
 import com.example.matatabi.crudretrofit.R;
 import com.example.matatabi.crudretrofit.UpdateLatLngActivity;
 import com.example.matatabi.crudretrofit.model.Latlng;
@@ -72,7 +73,8 @@ public class LatlngAdapter extends RecyclerView.Adapter<LatlngAdapter.LatlngView
             String nm_lat = txtLat.getText().toString();
             String nm_lng = txtLng.getText().toString();
 
-            Intent intent = new Intent(mctxt, UpdateLatLngActivity.class);
+//            Intent intent = new Intent(mctxt, UpdateLatLngActivity.class);
+            Intent intent = new Intent(mctxt, DetailLatlngActivity.class);
             intent.putExtra("id_latlng", id_latlng);
             intent.putExtra("nm_kabupaten", nm_kabupaten);
             intent.putExtra("nm_kecamatan", nm_kecamatan);
