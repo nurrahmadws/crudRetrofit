@@ -4,6 +4,7 @@ import com.example.matatabi.crudretrofit.model.KabupatenResponse;
 import com.example.matatabi.crudretrofit.model.KecamatanResponse;
 import com.example.matatabi.crudretrofit.model.KelurahanResponse;
 import com.example.matatabi.crudretrofit.model.LatlngResponse;
+import com.example.matatabi.crudretrofit.model.MahasiswaResponse;
 import com.example.matatabi.crudretrofit.model.Value;
 
 import retrofit2.Call;
@@ -38,6 +39,15 @@ public interface ApiRequest {
 
     @GET("spinnerKabupaten.php")
     Call<KabupatenResponse> spinKab();
+
+    @GET("spinKecamatan.php")
+    Call<KecamatanResponse> spinKec(@Query("nm_kabupaten") String nm_kabupaten);
+
+    @GET("spinKelurahan.php")
+    Call<KelurahanResponse> spinKel(@Query("nm_kecamatan") String nm_kecamatan);
+
+    @GET("spinLatlng.php")
+    Call<LatlngResponse> spinLatlng(@Query("nm_kelurahan") String nm_kelurahan);
 
     @FormUrlEncoded
     @POST("insertKec.php")
@@ -82,17 +92,29 @@ public interface ApiRequest {
     Call<Value> hapusKel(@Field("id_kelurahan") String id_kelurahan);
 
     @FormUrlEncoded
-    @POST("insertlatlng.php")
+    @POST("insertLatlngg.php")
     Call<Value> tambahLatlng(@Field("nm_kabupaten") String nm_kabupaten,
                              @Field("nm_kecamatan") String nm_kecamatan,
                              @Field("nm_kelurahan") String nm_kelurahan,
                              @Field("nm_lat") String nm_lat,
                              @Field("nm_lng") String nm_lng);
+//    @Field("nm_lat1") String nm_lat1,
+//    @Field("nm_lng1") String nm_lng1,
+//    @Field("nm_lat2") String nm_lat2,
+//    @Field("nm_lng2") String nm_lng2,
+//    @Field("nm_lat3") String nm_lat3,
+//    @Field("nm_lng3") String nm_lng3,
+//    @Field("nm_lat4") String nm_lat4,
+//    @Field("nm_lng4") String nm_lng4,
+//    @Field("nm_lat5") String nm_lat5,
+//    @Field("nm_lng5") String nm_lng5,
+//    @Field("nm_lat6") String nm_lat6,
+//    @Field("nm_lng6") String nm_lng6
 
     @GET("readLatlng.php")
     Call<LatlngResponse> readLatlng();
 
-    @GET("detailLatlng.php")
+    @GET("detailLatlngg.php")
     Call<LatlngResponse> detailLatlng(@Query("id_latlng") String id_latlng);
 
     @GET("detailKel.php")
@@ -110,4 +132,23 @@ public interface ApiRequest {
     @FormUrlEncoded
     @POST("deleteLatlng.php")
     Call<Value> hapusLatlng(@Field("id_latlng") String id_latlng);
+
+    @FormUrlEncoded
+    @POST("insertMahasiswa.php")
+    Call<Value> insertMhs(@Field("nim") String nim,
+                          @Field("nama") String nama,
+                          @Field("no_hp") String no_hp,
+                          @Field("jk") String jk,
+                          @Field("fakultas") String fakultas,
+                          @Field("prodi") String prodi,
+                          @Field("angkatan") String angkatan,
+                          @Field("provinsi") String provinsi,
+                          @Field("nm_kabupaten") String nm_kabupaten,
+                          @Field("nm_kecamatan") String nm_kecamatan,
+                          @Field("nm_kelurahan") String nm_kelurahan,
+                          @Field("nm_lat") String nm_lat,
+                          @Field("nm_lng") String nm_lng);
+
+    @GET("readMhs.php")
+    Call<MahasiswaResponse> readMhs();
 }

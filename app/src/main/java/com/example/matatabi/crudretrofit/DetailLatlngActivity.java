@@ -1,6 +1,8 @@
 package com.example.matatabi.crudretrofit;
 
 import android.app.ProgressDialog;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -12,9 +14,13 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolygonOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -76,15 +82,37 @@ public class DetailLatlngActivity extends FragmentActivity implements OnMapReady
             }
         });
     }
-
     private void initLocation(List<Latlng> list){
+//        PolygonOptions polygonOptions = new PolygonOptions().geodesic(true).strokeColor(Color.RED).fillColor(Color.argb(128, 255, 0, 0)).strokeWidth(5);
+
         for (int i=0; i<latlngList.size(); i++){
             LatLng location = new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat()),
                     Double.parseDouble(latlngList.get(i).getNm_lng()));
             mMap.addMarker(new MarkerOptions().position(location).title(latlngList.get(i).getNm_kelurahan()));
             LatLng latLng = new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat()),
                     Double.parseDouble(latlngList.get(i).getNm_lng()));
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLng.latitude,latLng.longitude), 11.0f));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLng.latitude,latLng.longitude), 15.0f));
+            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+            CircleOptions circleOptions = new CircleOptions().center(new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat()),
+                    Double.parseDouble(latlngList.get(i).getNm_lng()))).radius(1090).strokeColor(Color.RED).
+                    fillColor(Color.argb(128, 255, 0, 0));
+            Circle circle = mMap.addCircle(circleOptions);
+//            polygonOptions.add(
+//                    new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat1()),
+//                            Double.parseDouble(latlngList.get(i).getNm_lng1())
+//                    ),
+//                    new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat2()),
+//                            Double.parseDouble(latlngList.get(i).getNm_lng2())
+//                    ),
+//                    new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat3()),
+//                            Double.parseDouble(latlngList.get(i).getNm_lng3())
+//                    ),
+//                    new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat4()),
+//                            Double.parseDouble(latlngList.get(i).getNm_lng4())
+//                    ),
+//                    new LatLng(Double.parseDouble(latlngList.get(i).getNm_lat5()),
+//                            Double.parseDouble(latlngList.get(i).getNm_lng5())));
+//            mMap.addPolygon(polygonOptions);
         }
     }
 }

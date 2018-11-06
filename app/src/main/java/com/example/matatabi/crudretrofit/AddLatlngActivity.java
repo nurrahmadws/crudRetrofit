@@ -17,7 +17,7 @@ import retrofit2.Response;
 
 public class AddLatlngActivity extends AppCompatActivity {
 
-    private EditText edtidKelLatlng, edtkablatlng, edtKecLatlng, edtKeldesLatlng, edtLat, edtLng;
+    private EditText edtidKelLatlng, edtkablatlng, edtKecLatlng, edtKeldesLatlng, edtLat, edtLng, edtLat1, edtLng1, edtLat2, edtLng2, edtLat3, edtLng3, edtLat4, edtLng4, edtLat5, edtLng5, edtLat6, edtLng6;
     private Button btnSimpanLatLng;
 
     @Override
@@ -31,6 +31,18 @@ public class AddLatlngActivity extends AppCompatActivity {
         edtKeldesLatlng = (EditText) findViewById(R.id.edtKeldesLatlng);
         edtLat = (EditText) findViewById(R.id.edtLat);
         edtLng = (EditText) findViewById(R.id.edtLng);
+//        edtLat1 = (EditText) findViewById(R.id.edtLat1);
+//        edtLng1 = (EditText) findViewById(R.id.edtLng1);
+//        edtLat2 = (EditText) findViewById(R.id.edtLat2);
+//        edtLng2 = (EditText) findViewById(R.id.edtLng2);
+//        edtLat3 = (EditText) findViewById(R.id.edtLat3);
+//        edtLng3 = (EditText) findViewById(R.id.edtLng3);
+//        edtLat4 = (EditText) findViewById(R.id.edtLat4);
+//        edtLng4 = (EditText) findViewById(R.id.edtLng4);
+//        edtLat5 = (EditText) findViewById(R.id.edtLat5);
+//        edtLng5 = (EditText) findViewById(R.id.edtLng5);
+//        edtLat6 = (EditText) findViewById(R.id.edtLat6);
+//        edtLng6 = (EditText) findViewById(R.id.edtLng6);
         btnSimpanLatLng = (Button) findViewById(R.id.btnSimpanLatLng);
 
         Intent intent = getIntent();
@@ -58,6 +70,18 @@ public class AddLatlngActivity extends AppCompatActivity {
                 String nm_kelurahan = edtKeldesLatlng.getText().toString();
                 String nm_lat = edtLat.getText().toString().trim();
                 String nm_lng = edtLng.getText().toString().trim();
+//                String nm_lat1 = edtLat1.getText().toString().trim();
+//                String nm_lng1 = edtLng1.getText().toString().trim();
+//                String nm_lat2 = edtLat2.getText().toString().trim();
+//                String nm_lng2 = edtLng2.getText().toString().trim();
+//                String nm_lat3 = edtLat3.getText().toString().trim();
+//                String nm_lng3 = edtLng3.getText().toString().trim();
+//                String nm_lat4 = edtLat4.getText().toString().trim();
+//                String nm_lng4 = edtLng4.getText().toString().trim();
+//                String nm_lat5 = edtLat5.getText().toString().trim();
+//                String nm_lng5 = edtLng5.getText().toString().trim();
+//                String nm_lat6 = edtLat6.getText().toString().trim();
+//                String nm_lng6 = edtLng6.getText().toString().trim();
 
                 if (nm_lat.isEmpty()){
                     edtLat.setError("Latitude Harus diisi");
@@ -70,7 +94,8 @@ public class AddLatlngActivity extends AppCompatActivity {
                     return;
                 }
 
-                Call<Value> call = RetrofitClient.getmInstance().getApi().tambahLatlng(nm_kabupaten, nm_kecamatan, nm_kelurahan, nm_lat, nm_lng);
+                Call<Value> call = RetrofitClient.getmInstance().getApi().tambahLatlng(
+                        nm_kabupaten, nm_kecamatan, nm_kelurahan, nm_lat, nm_lng);
                 call.enqueue(new Callback<Value>() {
                     @Override
                     public void onResponse(Call<Value> call, Response<Value> response) {

@@ -52,6 +52,56 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+            <!--<TextView-->
+                <!--android:id="@+id/txtLat1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLng1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLat2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLng2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLat3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLng3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLat4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLng4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLat5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtLng5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
 
 
         </LinearLayout>

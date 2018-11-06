@@ -8,6 +8,19 @@ public class Latlng {
     private String nm_kelurahan;
     private String nm_lat;
     private String nm_lng;
+//    private String nm_lat1;
+//    private String nm_lng1;
+//    private String nm_lat2;
+//    private String nm_lng2;
+//    private String nm_lat3;
+//    private String nm_lng3;
+//    private String nm_lat4;
+//    private String nm_lng4;
+//    private String nm_lat5;
+//    private String nm_lng5;
+//    private String nm_lat6;
+//    private String nm_lng6;
+
 
     public Latlng(String id_latlng, String nm_kabupaten, String nm_kecamatan, String nm_kelurahan, String nm_lat, String nm_lng) {
         this.id_latlng = id_latlng;

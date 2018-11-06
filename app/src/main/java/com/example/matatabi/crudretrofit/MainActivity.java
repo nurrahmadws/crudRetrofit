@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edtTextKabupaten;
-    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan, btn_tambah_desa, btn_lihat_desa, btn_lihat_latlng, btn_tambah_laylng;
+    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan, btn_tambah_desa, btn_lihat_desa, btn_lihat_latlng, btn_tambah_laylng, btn_polygon_demo, btn_circle_demo, btn_add_mahasiswa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +121,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ReadLatlngActivity.class));
+            }
+        });
+
+        btn_polygon_demo = (Button) findViewById(R.id.btn_polygon_demo);
+        btn_polygon_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PolygonDemoActivity.class));
+            }
+        });
+
+        btn_circle_demo = (Button) findViewById(R.id.btn_Circle_demo);
+        btn_circle_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CircleDemoActivity.class));
+            }
+        });
+
+        btn_add_mahasiswa = (Button) findViewById(R.id.btn_add_mahasiswa);
+        btn_add_mahasiswa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddMahasiswaActivity.class));
             }
         });
     }

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -58,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Maukkan Latitude"
-            android:inputType="textCapWords"/>
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -69,8 +73,140 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Masukkan Longtitude"
-            android:inputType="textCapWords"/>
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLat1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Latitude1"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLng1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Longtitude1"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLat2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Latitude2"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLng2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Longtitude2"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLat3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Latitude3"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLng3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Longtitude3"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLat4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Latitude4"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLng4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Longtitude4"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLat5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Latitude5"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLng5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Longtitude5"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLat6"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Latitude6"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edtLng6"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Masukkan Longtitude6"-->
+            <!--android:inputType="text"/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
 
     <Button
         android:id="@+id/btnSimpanLatLng"
@@ -80,3 +216,4 @@
         android:text="Tambah"/>
 
 </LinearLayout>
+    </ScrollView>

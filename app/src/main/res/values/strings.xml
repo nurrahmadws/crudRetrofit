@@ -1,7 +1,39 @@
 <resources>
-    <string name="app_name">CrudRetrofit</string>
+    <string name="app_name">Demo</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_detail_latlng">Map</string>
+    <string name="properties_australia_polygon">p</string>
+    <string name="fill_hue">Arsiran</string>
+    <string name="fill_alpha">Tingkat Transparan</string>
+    <string name="stroke_width">Tebal Batasan</string>
+    <string name="stroke_hue">Warna Batasan</string>
+    <string name="stroke_alpha">T. Transparan Batasan</string>
+    <string name="stroke_joint_type">Stroke Joint type</string>
+    <string name="stroke_pattern">Tipe Pattern</string>
+    <string name="map_type">Tipe Map</string>
+    <string name="clickable">Click</string>
+    <string name="joint_type_default">Default</string>
+    <string name="joint_type_bevell">Bevel</string>
+    <string name="joint_type_round">Round</string>
+    <string name="pattern_solid">Solid</string>
+    <string name="pattern_dashed">Dashed</string>
+    <string name="pattern_dotted">Dotted</string>
+    <string name="pattern_mixed">Mixed</string>
+    <string name="map_normal">Normal</string>
+    <string name="map_hybrid">Hybrid</string>
+    <string name="map_satellite">Satellite</string>
+    <string name="map_terrai">Terrain</string>
+    <string name="polygon_demo_description">Demonstrates how to add Polygons to a map.</string>
+    <string name="properties_circle">Kelurahan Atau Desa</string>
+    <string name="map_circle_description">Circle</string>
+    <string-array name="angkatan">
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+    </string-array>
 </resources>

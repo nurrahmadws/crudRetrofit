@@ -42,6 +42,16 @@ public class LatlngAdapter extends RecyclerView.Adapter<LatlngAdapter.LatlngView
         latlngViewHolder.txtKelurahanLatlng.setText(latlng.getNm_kelurahan());
         latlngViewHolder.txtLat.setText(latlng.getNm_lat());
         latlngViewHolder.txtLng.setText(latlng.getNm_lng());
+//        latlngViewHolder.txtLat1.setText(latlng.getNm_lat1());
+//        latlngViewHolder.txtLng1.setText(latlng.getNm_lng1());
+//        latlngViewHolder.txtLat2.setText(latlng.getNm_lat2());
+//        latlngViewHolder.txtLng2.setText(latlng.getNm_lng2());
+//        latlngViewHolder.txtLat3.setText(latlng.getNm_lat3());
+//        latlngViewHolder.txtLng3.setText(latlng.getNm_lng3());
+//        latlngViewHolder.txtLat4.setText(latlng.getNm_lat4());
+//        latlngViewHolder.txtLng4.setText(latlng.getNm_lng4());
+//        latlngViewHolder.txtLat5.setText(latlng.getNm_lat5());
+//        latlngViewHolder.txtLng5.setText(latlng.getNm_lng5());
     }
 
     @Override
@@ -51,7 +61,7 @@ public class LatlngAdapter extends RecyclerView.Adapter<LatlngAdapter.LatlngView
 
     class LatlngViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView txtidLatlng, txtKabupateLatlng, txtKecamatanLatlng, txtKelurahanLatlng, txtLat, txtLng;
+        TextView txtidLatlng, txtKabupateLatlng, txtKecamatanLatlng, txtKelurahanLatlng, txtLat, txtLng, txtLat1, txtLng1, txtLat2, txtLng2, txtLat3, txtLng3, txtLat4, txtLng4, txtLat5, txtLng5;
 
         public LatlngViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +71,16 @@ public class LatlngAdapter extends RecyclerView.Adapter<LatlngAdapter.LatlngView
             txtKelurahanLatlng = itemView.findViewById(R.id.txtKelurahanLatlng);
             txtLat = itemView.findViewById(R.id.txtLat);
             txtLng = itemView.findViewById(R.id.txtLng);
+//            txtLat1 = itemView.findViewById(R.id.txtLat1);
+//            txtLng1 = itemView.findViewById(R.id.txtLng1);
+//            txtLat2 = itemView.findViewById(R.id.txtLat2);
+//            txtLng2 = itemView.findViewById(R.id.txtLng2);
+//            txtLat3 = itemView.findViewById(R.id.txtLat3);
+//            txtLng3 = itemView.findViewById(R.id.txtLng3);
+//            txtLat4 = itemView.findViewById(R.id.txtLat4);
+//            txtLng4 = itemView.findViewById(R.id.txtLng4);
+//            txtLat5 = itemView.findViewById(R.id.txtLat5);
+//            txtLng5 = itemView.findViewById(R.id.txtLng5);
             itemView.setOnClickListener(this);
         }
 
@@ -72,6 +92,16 @@ public class LatlngAdapter extends RecyclerView.Adapter<LatlngAdapter.LatlngView
             String nm_kelurahan = txtKelurahanLatlng.getText().toString();
             String nm_lat = txtLat.getText().toString();
             String nm_lng = txtLng.getText().toString();
+//            String nm_lat1 = txtLat1.getText().toString();
+//            String nm_lng1 = txtLng1.getText().toString();
+//            String nm_lat2 = txtLat2.getText().toString();
+//            String nm_lng2 = txtLng2.getText().toString();
+//            String nm_lat3 = txtLat3.getText().toString();
+//            String nm_lng3 = txtLng3.getText().toString();
+//            String nm_lat4 = txtLat4.getText().toString();
+//            String nm_lng4 = txtLng4.getText().toString();
+//            String nm_lat5 = txtLat5.getText().toString();
+//            String nm_lng5 = txtLng5.getText().toString();
 
 //            Intent intent = new Intent(mctxt, UpdateLatLngActivity.class);
             Intent intent = new Intent(mctxt, DetailLatlngActivity.class);
@@ -81,6 +111,16 @@ public class LatlngAdapter extends RecyclerView.Adapter<LatlngAdapter.LatlngView
             intent.putExtra("nm_kelurahan", nm_kelurahan);
             intent.putExtra("nm_lat", nm_lat);
             intent.putExtra("nm_lng", nm_lng);
+//            intent.putExtra("nm_lat1", nm_lat1);
+//            intent.putExtra("nm_lng1", nm_lng1);
+//            intent.putExtra("nm_lat2", nm_lat2);
+//            intent.putExtra("nm_lng2", nm_lng2);
+//            intent.putExtra("nm_lat3", nm_lat3);
+//            intent.putExtra("nm_lng3", nm_lng3);
+//            intent.putExtra("nm_lat4", nm_lat4);
+//            intent.putExtra("nm_lng4", nm_lng4);
+//            intent.putExtra("nm_lat5", nm_lat5);
+//            intent.putExtra("nm_lng5", nm_lng5);
             mctxt.startActivity(intent);
 
 
