@@ -267,9 +267,9 @@ public class AddMahasiswaActivity extends AppCompatActivity {
                 String message = response.body().getMessage();
                 if (value.equals("1")){
                     Toast.makeText(AddMahasiswaActivity.this, message, Toast.LENGTH_LONG).show();
-//                    startActivity(new Intent(AddMahasiswaActivity.this, ReadKecActivity.class)
-//                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
-//                    finish();
+                    startActivity(new Intent(AddMahasiswaActivity.this, DetailMhsActivity.class)
+                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+                    finish();
                 }else{
                     Toast.makeText(AddMahasiswaActivity.this, message, Toast.LENGTH_SHORT).show();
                 }

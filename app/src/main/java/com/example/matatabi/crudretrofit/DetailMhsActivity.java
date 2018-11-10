@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.matatabi.crudretrofit.fragments.akademik_fragment;
+import com.example.matatabi.crudretrofit.fragments.asal_daerah_fragment;
 import com.example.matatabi.crudretrofit.fragments.biodata_fragment;
 
 public class DetailMhsActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -37,10 +39,10 @@ public class DetailMhsActivity extends AppCompatActivity implements BottomNaviga
                 fragment = new biodata_fragment();
                 break;
             case R.id.menu_data_akademik:
-
+                fragment = new akademik_fragment();
                 break;
             case R.id.menu_daerah_asal:
-
+                fragment = new asal_daerah_fragment();
                 break;
         }if (fragment != null){
             displayFragment(fragment);

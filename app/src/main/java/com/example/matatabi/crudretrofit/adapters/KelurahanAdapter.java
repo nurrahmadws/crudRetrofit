@@ -23,7 +23,7 @@ public class KelurahanAdapter extends RecyclerView.Adapter<KelurahanAdapter.Kelu
     private Context mct;
     private List<Kelurahan> kelurahanList;
 
-    public KelurahanAdapter(Context mct, List<Kelurahan> kelurahanList) {
+    public  KelurahanAdapter(Context mct, List<Kelurahan> kelurahanList) {
         this.mct = mct;
         this.kelurahanList = kelurahanList;
     }

@@ -151,4 +151,26 @@ public interface ApiRequest {
 
     @GET("readMhs.php")
     Call<MahasiswaResponse> readMhs();
+
+    @GET("detailMhs.php")
+    Call<MahasiswaResponse> detailMhs(@Query("nim") String nim);
+
+    @GET("detail_daerah_mhs.php")
+    Call<MahasiswaResponse> detailDaerahMhs(@Query("nm_lat") String nm_lat);
+
+    @FormUrlEncoded
+    @POST("updateMhs.php")
+    Call<Value> updateMhs(@Field("nim") String nim,
+                          @Field("nama") String nama,
+                          @Field("no_hp") String no_hp,
+                          @Field("jk") String jk,
+                          @Field("fakultas") String fakultas,
+                          @Field("prodi") String prodi,
+                          @Field("angkatan") String angkatan,
+                          @Field("provinsi") String provinsi,
+                          @Field("nm_kabupaten") String nm_kabupaten,
+                          @Field("nm_kecamatan") String nm_kecamatan,
+                          @Field("nm_kelurahan") String nm_kelurahan,
+                          @Field("nm_lat") String nm_lat,
+                          @Field("nm_lng") String nm_lng);
 }

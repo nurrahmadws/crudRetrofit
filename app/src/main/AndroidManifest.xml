@@ -50,7 +50,11 @@
         <activity android:name=".CircleDemoActivity" />
         <activity android:name=".AddMahasiswaActivity" />
         <activity android:name=".ReadMhsActivity" />
-        <activity android:name=".DetailMhsActivity"></activity>
+        <activity android:name=".DetailMhsActivity" />
+        <activity
+            android:name=".DetailDaerahMhsActivity"
+            android:label="@string/title_activity_detail_daerah_mhs" />
+        <activity android:name=".EditMahasiswaActivity"></activity>
     </application>
 
 </manifest>

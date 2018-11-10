@@ -38,7 +38,7 @@ public class DetailLatlngActivity extends FragmentActivity implements OnMapReady
         setContentView(R.layout.activity_detail_latlng);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+                .findFragmentById(R.id.mapp);
         mapFragment.getMapAsync(this);
     }
 
