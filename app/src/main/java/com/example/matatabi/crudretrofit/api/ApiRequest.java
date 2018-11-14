@@ -4,7 +4,9 @@ import com.example.matatabi.crudretrofit.model.KabupatenResponse;
 import com.example.matatabi.crudretrofit.model.KecamatanResponse;
 import com.example.matatabi.crudretrofit.model.KelurahanResponse;
 import com.example.matatabi.crudretrofit.model.LatlngResponse;
+import com.example.matatabi.crudretrofit.model.LoginResponse;
 import com.example.matatabi.crudretrofit.model.MahasiswaResponse;
+import com.example.matatabi.crudretrofit.model.UsersResponse;
 import com.example.matatabi.crudretrofit.model.Value;
 
 import retrofit2.Call;
@@ -173,4 +175,30 @@ public interface ApiRequest {
                           @Field("nm_kelurahan") String nm_kelurahan,
                           @Field("nm_lat") String nm_lat,
                           @Field("nm_lng") String nm_lng);
+
+    @FormUrlEncoded
+    @POST("registrasi.php")
+    Call<Value> registrasi(@Field("username") String username,
+                           @Field("password") String password,
+                           @Field("level") String field);
+
+    @FormUrlEncoded
+    @POST("editUser.php")
+    Call<Value> editUser(@Field("id_user") String id_user,
+                         @Field("username") String username,
+                         @Field("password") String password,
+                         @Field("level") String level);
+
+    @GET("readUsers.php")
+    Call<UsersResponse> readUsers();
+
+    @FormUrlEncoded
+    @POST("deleteUser.php")
+    Call<Value> hapusUser(@Field("id_user") String id_user);
+
+    @FormUrlEncoded
+    @POST("userlogin")
+    Call<LoginResponse> userLogin(
+            @Field("username") String username,
+            @Field("password") String password);
 }

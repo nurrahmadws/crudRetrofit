@@ -36,5 +36,9 @@
         <item>2017</item>
         <item>2018</item>
     </string-array>
+    <string-array name="level">
+        <item>Admin</item>
+        <item>Mahasiswa</item>
+    </string-array>
     <string name="title_activity_detail_daerah_mhs">Map</string>
 </resources>

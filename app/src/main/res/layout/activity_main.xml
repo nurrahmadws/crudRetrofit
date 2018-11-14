@@ -110,5 +110,26 @@
         android:layout_marginTop="10dp"
         android:text="Read Mahasiswa"/>
 
+    <Button
+        android:id="@+id/btn_registrasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Registrasi"/>
+
+    <Button
+        android:id="@+id/btn_read_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Read User"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Login"/>
+
 </LinearLayout>
 </ScrollView>

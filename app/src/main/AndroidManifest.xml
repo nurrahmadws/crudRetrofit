@@ -54,7 +54,11 @@
         <activity
             android:name=".DetailDaerahMhsActivity"
             android:label="@string/title_activity_detail_daerah_mhs" />
-        <activity android:name=".EditMahasiswaActivity"></activity>
+        <activity android:name=".EditMahasiswaActivity" />
+        <activity android:name=".RegistrasiActivity" />
+        <activity android:name=".UsersActivity" />
+        <activity android:name=".EditUsersActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

@@ -22,7 +22,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edtTextKabupaten;
-    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan, btn_tambah_desa, btn_lihat_desa, btn_lihat_latlng, btn_tambah_laylng, btn_polygon_demo, btn_circle_demo, btn_add_mahasiswa, btn_read_mahasiswa;
+    private Button btn_daftar, btn_lihat, btn_tambah_keca, btn_lihat_kecamatan, btn_tambah_desa, btn_lihat_desa, btn_lihat_latlng, btn_tambah_laylng, btn_polygon_demo, btn_circle_demo, btn_add_mahasiswa, btn_read_mahasiswa, btn_registrasi, btnReadUser,
+    btn_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,6 +154,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ReadMhsActivity.class));
+            }
+        });
+
+        btn_registrasi = findViewById(R.id.btn_registrasi);
+        btn_registrasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RegistrasiActivity.class));
+            }
+        });
+
+        btnReadUser = findViewById(R.id.btn_read_user);
+        btnReadUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, UsersActivity.class));
+            }
+        });
+
+        btn_login = findViewById(R.id.btn_login);
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
     }
