@@ -58,7 +58,9 @@
         <activity android:name=".RegistrasiActivity" />
         <activity android:name=".UsersActivity" />
         <activity android:name=".EditUsersActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MahasiswaActivity" />
+        <activity android:name=".AdminActivity"></activity>
     </application>
 
 </manifest>

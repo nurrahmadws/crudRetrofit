@@ -2,30 +2,57 @@ package com.example.matatabi.crudretrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class LoginResponse {
     @SerializedName("value")
-    private String value;
+    private Boolean value;
 
     @SerializedName("message")
     private String message;
 
-    private Users users;
+    @SerializedName("username")
+    private String username;
 
-    public LoginResponse(String value, String message, Users users) {
+    @SerializedName("level")
+    private String level;
+
+    public LoginResponse(Boolean value, String message, String username, String level) {
         this.value = value;
         this.message = message;
-        this.users = users;
+        this.username = username;
+        this.level = level;
     }
 
-    public String getValue() {
+    public Boolean getValue() {
         return value;
+    }
+
+    public void setValue(Boolean value) {
+        this.value = value;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public Users getUsers() {
-        return users;
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }

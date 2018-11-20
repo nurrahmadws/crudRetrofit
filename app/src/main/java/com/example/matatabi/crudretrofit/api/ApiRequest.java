@@ -197,8 +197,8 @@ public interface ApiRequest {
     Call<Value> hapusUser(@Field("id_user") String id_user);
 
     @FormUrlEncoded
-    @POST("userlogin")
+    @POST("login.php")
     Call<LoginResponse> userLogin(
-            @Field("username") String username,
-            @Field("password") String password);
+                            @Field("username") String username,
+                            @Field("password") String password);
 }
